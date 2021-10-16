@@ -1,4 +1,4 @@
-fetch("https://v3.football.api-sports.io/fixtures", {
+fetch("https://v3.football.api-sports.io/timezone", {
 "method": "GET",
 "headers": {
 "x-apisports-key": "33f39848c59f36bde81b32221df49f0f",
