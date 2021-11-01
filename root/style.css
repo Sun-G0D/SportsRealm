@@ -1,1 +1,9 @@
+.menu-nav {
+    list-style-type: none;
+}
 
+.o-flexy {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}

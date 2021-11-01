@@ -1,4 +1,4 @@
-var url = new URL(window.location.href);
+/*var url = new URL(window.location.href);
 var search_params = url.searchParams;
 
 // timezone param value set to Europe to get matches data from this timezone
@@ -24,3 +24,4 @@ fetch("https://v3.football.api-sports.io/fixtures?live=all", {
     console.error(err);
 });
 
+*/
