@@ -1,0 +1,7 @@
+.menu-nav {
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    max-width: 90%;
+}
