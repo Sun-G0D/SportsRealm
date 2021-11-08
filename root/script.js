@@ -11,7 +11,7 @@ url.search = search_params.toString();
 // the new url string
 new_url = url.toString();
 
-fetch("https://v3.football.api-sports.io/fixtures?league=4season=2021", {
+fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
     "method": "GET",
     "headers": {
         "x-apisports-key": "33f39848c59f36bde81b32221df49f0f",
@@ -25,3 +25,5 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4season=2021", {
     console.error(err);
 });
 
+var displayp = document.getElementById("displayMatch");
+displayMatch.innerHTML = response;
