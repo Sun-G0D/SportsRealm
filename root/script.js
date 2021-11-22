@@ -21,9 +21,10 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
 })
 .then(response => {
     console.log(response);
+    displayp.innerHTML = XMLHttpRequest.getAllResponseHeaders();
 })
 .catch(err => {
     console.error(err);
 });
 
-displayp.innerHTML = XMLHttpRequest.getAllResponseHeaders();
+
