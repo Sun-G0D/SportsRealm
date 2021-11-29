@@ -1,6 +1,7 @@
 var url = new URL(window.location.href);
 var search_params = url.searchParams;
 var displayp = document.getElementById("displayMatch");
+var responseh;
 
 // timezone param value set to Europe to get matches data from this timezone
 //search_params.set('timezone', 'Europe/London');
@@ -21,10 +22,12 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
 })
 .then(response => {
     console.log(response);
-    displayp.innerHTML = XMLHttpRequest.getAllResponseHeaders();
+    responseh = response.toString();
 })
 .catch(err => {
     console.error(err);
 });
+
+displayp.innerHTML = responseh.headers['Content-Length'];
 
 
