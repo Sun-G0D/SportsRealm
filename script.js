@@ -13,6 +13,14 @@ url.search = search_params.toString();
 // the new url string
 new_url = url.toString();
 
+function objToString (obj) {
+    let str = '';
+    for (const [p, val] of Object.entries(obj)) {
+        str += `${p}::${val}\n`;
+    }
+    return str;
+}
+
 fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
     "method": "GET",
     "headers": {
@@ -22,6 +30,7 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
 })
 .then(response => {
     console.log(response);
+    alert(objToString(response));
 })
 .catch(err => {
     console.error(err);
