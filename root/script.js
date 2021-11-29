@@ -22,12 +22,10 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
 })
 .then(response => {
     console.log(response);
-    responseh = response.toString();
 })
 .catch(err => {
     console.error(err);
 });
 
-displayp.innerHTML = responseh.headers['Content-Length'];
 
 
