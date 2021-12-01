@@ -1,7 +1,7 @@
 var url = new URL(window.location.href);
 var search_params = url.searchParams;
 var displayp = document.getElementById("displayMatch");
-var responseh;
+
 
 // timezone param value set to Europe to get matches data from this timezone
 //search_params.set('timezone', 'Europe/London');
@@ -13,14 +13,6 @@ url.search = search_params.toString();
 // the new url string
 new_url = url.toString();
 
-function objToString (obj) {
-    let str = '';
-    for (const [p, val] of Object.entries(obj)) {
-        str += `${p}::${val}\n`;
-    }
-    return str;
-}
-
 fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
     "method": "GET",
     "headers": {
@@ -29,12 +21,13 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", {
     }
 })
 .then(response => {
-    console.log(response);
-    alert(objToString(response));
+    return response.json();
+})
+.then(data => {
+    console.log(data.response);
+    document.getElementById("displayMatch").innerHTML = "stuff works bois";
 })
 .catch(err => {
     console.error(err);
 });
-
-
 
