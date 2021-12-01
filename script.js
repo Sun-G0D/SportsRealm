@@ -13,7 +13,19 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", { // fe
 })
 .then(data => {  // another promise to get the actual response
     console.log(data.response);
-    document.getElementById("displayMatch").innerHTML = "stuff works bois"; //changes the html element where we want to display data
+    const html = data.response.map(match => {
+        return `
+            <div>
+                <p>Home Team: ${match.teams.home.name}</p>
+                <p>Away Team: ${match.teams.away.name}</p>
+            </div>
+        `;
+        
+    }).join(' ');
+    console.log(html);
+    document
+        .getElementById("displayMatch")
+        .insertAdjacentHTML('afterbegin', html); //changes the html element where we want to display data
 })
 .catch(err => {
     console.error(err);
