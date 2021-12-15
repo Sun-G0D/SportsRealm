@@ -5,29 +5,29 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", { // fe
         "x-rapidapi-host": "v3.football.api-sports.io"
     }
 })
-.then(response => { // promise for doing the response body mixin
-    if(!response.ok) {
-        throw Error("ERROR"); //if fetch req url is wrong, will say error
-    }
-    return response.json(); // to make sure the other promise doesnt run until after mixin
-})
-.then(data => {  // another promise to get the actual response
-    console.log(data.response);
-    const html = data.response.map(match => {
-        return `
+    .then(response => { // promise for doing the response body mixin
+        if (!response.ok) {
+            throw Error("ERROR"); //if fetch req url is wrong, will say error
+        }
+        return response.json(); // to make sure the other promise doesnt run until after mixin
+    })
+    .then(data => {  // another promise to get the actual response
+        console.log(data.response);
+        const html = data.response.map(match => {
+            return `
             <div>
                 <p>Home Team: ${match.teams.home.name}</p>
                 <p>Away Team: ${match.teams.away.name}</p>
             </div>
         `;
-        
-    }).join(' ');
-    console.log(html);
-    document
-        .getElementById("displayMatch")
-        .insertAdjacentHTML('afterbegin', html); //changes the html element where we want to display data
-})
-.catch(err => {
-    console.error(err);
-});
+
+        }).join(' ');
+        console.log(html);
+        document
+            .getElementById("displayMatch")
+            .insertAdjacentHTML('afterbegin', html); //changes the html element where we want to display data
+    })
+    .catch(err => {
+        console.error(err);
+    });
 
