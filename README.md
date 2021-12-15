@@ -2,8 +2,10 @@
 Sportsrealm is a free sports betting website that allows anyone to get a feel for betting without risking real money.
 
 # Technology Used:
-![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) 
-https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white
+![html](https://img.shields.io/badge/HTML-239120?style=plastic&logo=html5&logoColor=white) 
+![css](https://img.shields.io/badge/CSS-239120?&style=plastic&logo=css3&logoColor=white)
+![js](https://img.shields.io/badge/JavaScript-323330?style=plastic&logo=javascript&logoColor=F7DF1E)
+![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=plastic&logo=microsoft-azure&logoColor=white)
 
 Currently we are using the API-Football which is a restful API for football data and can be found at https://www.api-football.com/.
 
