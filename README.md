@@ -2,7 +2,11 @@
 Sportsrealm is a free sports betting website that allows anyone to get a feel for betting without risking real money.
 
 # Technology Used:
-https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white
+![html](https://img.shields.io/badge/HTML-239120?style=plastic&logo=html5&logoColor=white) 
+![css](https://img.shields.io/badge/CSS-239120?&style=plastic&logo=css3&logoColor=white)
+![js](https://img.shields.io/badge/JavaScript-323330?style=plastic&logo=javascript&logoColor=F7DF1E)
+![Microsoft Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=plastic&logo=microsoft-azure&logoColor=white)
+
 Currently we are using the API-Football which is a restful API for football data and can be found at https://www.api-football.com/.
 
 # Future Plans:
@@ -18,9 +22,5 @@ When visiting the website through https://sportsrealm.azurewebsites.net/ you may
 ![image](https://user-images.githubusercontent.com/47151235/146228669-34155a03-2c14-46a8-9fc2-8f498bb21907.png)
 refreshing the website should fix the problem, if not then you can either contact us, use the site from your local machine.
 
-
-
-
-
-Spec Frame link:
+# Additional Documentation and Details:
 https://docs.google.com/document/d/1s6TRNDSlC6Iy3ur4xbQw3T9gNEVDOC4OpPpMN2MRc6M/edit?usp=sharing

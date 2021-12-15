@@ -24,14 +24,14 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", { // fe
             </div>
         </ul>
         `;
-        
-    }).join(' ');
-    console.log(html);
-    document
-        .getElementById("displayMatch")
-        .insertAdjacentHTML('afterbegin', html); //changes the html element where we want to display data
-})
-.catch(err => {
-    console.error(err);
-});
+
+        }).join(' ');
+        console.log(html);
+        document
+            .getElementById("displayMatch")
+            .insertAdjacentHTML('afterbegin', html); //changes the html element where we want to display data
+    })
+    .catch(err => {
+        console.error(err);
+    });
 
