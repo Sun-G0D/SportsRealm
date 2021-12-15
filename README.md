@@ -22,9 +22,5 @@ When visiting the website through https://sportsrealm.azurewebsites.net/ you may
 ![image](https://user-images.githubusercontent.com/47151235/146228669-34155a03-2c14-46a8-9fc2-8f498bb21907.png)
 refreshing the website should fix the problem, if not then you can either contact us, use the site from your local machine.
 
-
-
-
-
-Spec Frame link:
+# Additional Documentation and Details:
 https://docs.google.com/document/d/1s6TRNDSlC6Iy3ur4xbQw3T9gNEVDOC4OpPpMN2MRc6M/edit?usp=sharing
