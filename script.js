@@ -15,10 +15,14 @@ fetch("https://v3.football.api-sports.io/fixtures?league=4&season=2020", { // fe
     console.log(data.response);
     const html = data.response.map(match => {
         return `
+        <ul class = "apiBorder"> 
+
+        
             <div>
                 <p>Home Team: ${match.teams.home.name}</p>
                 <p>Away Team: ${match.teams.away.name}</p>
             </div>
+        </ul>
         `;
         
     }).join(' ');

@@ -14,3 +14,11 @@
     border: 5px solid green;
     margin: 0;
   }
+
+  .apiBorder {
+    border:3px;
+    border-style:solid;
+    border-color: #FF0000;
+    padding: 1em;
+
+  }
