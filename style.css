@@ -7,3 +7,10 @@
     display: flex;
     justify-content: space-around;
 }
+
+.mainDisplay {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid green;
+    margin: 0;
+  }
