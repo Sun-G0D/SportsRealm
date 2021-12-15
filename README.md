@@ -2,8 +2,7 @@
 Sportsrealm is a free sports betting website that allows anyone to get a feel for betting without risking real money.
 
 # Technology Used:
-The project is implemented in html, css, and js since these languages make web development relatively easier. 
-For now we are hosting the website through Microsoft Azure, thus we have a empty json container and php file as a dummy backend. 
+https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white
 Currently we are using the API-Football which is a restful API for football data and can be found at https://www.api-football.com/.
 
 # Future Plans:
