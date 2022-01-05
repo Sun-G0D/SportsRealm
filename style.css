@@ -1,5 +1,7 @@
 .menu-nav {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .o-flexy {
@@ -19,7 +21,7 @@
     border:3px;
     border-style:solid;
     border-color: #FF0000;
-    padding: 15px;
+    padding: 4px;
     border-radius: 15px
     
 }
@@ -33,5 +35,9 @@
     overflow-y: scroll;
     height: 500px;
     width: 50%;
-    gap: 10px
+    gap: 10px;
+}
+
+.test {
+  border: 4px;
 }
