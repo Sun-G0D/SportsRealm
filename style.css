@@ -13,12 +13,25 @@
     padding: 10px;
     border: 5px solid green;
     margin: 0;
-  }
+}
 
-  .apiBorder {
+.apiBorder {
     border:3px;
     border-style:solid;
     border-color: #FF0000;
-    padding: 1em;
+    padding: 15px;
+    border-radius: 15px
+    
+}
 
-  }
+.displayList {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden; 
+    overflow-y: scroll;
+    height: 500px;
+    width: 50%;
+    gap: 10px
+}
