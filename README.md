@@ -18,7 +18,7 @@ There are two ways to use the project:
 - Alternatively, you can have the project on your local machine, Simply download the repo and then extract the file. After that you should be able to host the website on your local machine by right clicking on the "index.html" file and then clicking on "open with" to open the file with chrome. It is also possible to view the code by pressing ctrl + shift + i, or you can also view the code simply by doing the same process it takes to run the file except opening with notepad.
 
 Some errors you may encounter:
-When visiting the website through https://sportsrealm.azurewebsites.net/ you may run into an error 404 which looks like this
+When visiting the website through https://sportsrealmplay.azurewebsites.net/ you may run into an error 404 which looks like this
 ![image](https://user-images.githubusercontent.com/47151235/146228669-34155a03-2c14-46a8-9fc2-8f498bb21907.png)
 refreshing the website should fix the problem, if not then you can either contact us or use the site from your local machine.
 
