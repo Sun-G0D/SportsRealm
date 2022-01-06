@@ -14,7 +14,7 @@ In the future we plan to add cosmetics for the users so they have alternative pl
 
 # How to Use:
 There are two ways to use the project:
-- You can go to the hosted website through the browser by visiting https://sportsrealm.azurewebsites.net/
+- You can go to the hosted website through the browser by visiting https://sportsrealmplay.azurewebsites.net/
 - Alternatively, you can have the project on your local machine, Simply download the repo and then extract the file. After that you should be able to host the website on your local machine by right clicking on the "index.html" file and then clicking on "open with" to open the file with chrome. It is also possible to view the code by pressing ctrl + shift + i, or you can also view the code simply by doing the same process it takes to run the file except opening with notepad.
 
 Some errors you may encounter:
