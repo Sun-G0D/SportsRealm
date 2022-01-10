@@ -23,7 +23,7 @@ When visiting the website through https://sportsrealmplay.azurewebsites.net/ you
 refreshing the website should fix the problem, if not then you can either contact us or use the site from your local machine.
 
 <b>Available features:</b>
-   -Navigate through 3 different pages:
+   -Navigate through 3 different pages
    - Home
    - Profile
    - Shop
