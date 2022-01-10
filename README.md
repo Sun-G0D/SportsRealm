@@ -23,10 +23,7 @@ When visiting the website through https://sportsrealmplay.azurewebsites.net/ you
 refreshing the website should fix the problem, if not then you can either contact us or use the site from your local machine.
 
 Available features:
-   -Navigate through 3 different pages
-   - Home
-   - Profile
-   - Shop
+- Navigate through 3 different pages(Home, Profile, Shop)
 - Displays username and amount of Betbux in a designated section of the website, inside the blue box
 - Scrollable list containing the most recent matches between teams (Home Team vs. Away Team) of the qualifying teams in 2020
 - Matches are organized chronologically of the Euro Championship games from most recent to latest
