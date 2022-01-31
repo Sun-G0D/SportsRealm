@@ -1,6 +1,6 @@
 var legName = `<p>k;llkj</p>`;
 
-fetch("https://v3.football.api-sports.io/fixtures?last=2", { // ?league=4&season=2020 fetch req to the api to get data, params are set with "name=**&name="
+fetch("https://v3.football.api-sports.io/fixtures?last=15", { // ?league=4&season=2020 fetch req to the api to get data, params are set with "name=**&name="
     "method": "GET",
     "headers": {
         "x-apisports-key": "33f39848c59f36bde81b32221df49f0f", //our own api key
@@ -37,7 +37,7 @@ fetch("https://v3.football.api-sports.io/fixtures?last=2", { // ?league=4&season
     console.error(err);
 });
 
-fetch("https://v3.football.api-sports.io/fixtures?next=2", { // ?league=4&season=2020 fetch req to the api to get data, params are set with "name=**&name="
+fetch("https://v3.football.api-sports.io/fixtures?next=15", { // ?league=4&season=2020 fetch req to the api to get data, params are set with "name=**&name="
     "method": "GET",
     "headers": {
         "x-apisports-key": "33f39848c59f36bde81b32221df49f0f", //our own api key
@@ -80,4 +80,3 @@ function inDepthDisplayMatch() {
         .insertAdjacentHTML('afterbegin', legName);
     alert("asdf");
 }
-
