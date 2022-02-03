@@ -3,7 +3,7 @@ var legName = `<p>k;llkj</p>`;
 fetch("https://v3.football.api-sports.io/fixtures?last=15", { // ?league=4&season=2020 fetch req to the api to get data, params are set with "name=**&name="
     "method": "GET",
     "headers": {
-        "x-apisports-key": "33f39848c59f36bde81b32221df49f0f", //our own api key
+        "x-apisports-key": "94c23903445161b4923495b3fd170b00", //our own api key
         "x-rapidapi-host": "v3.football.api-sports.io"
     }
 })
