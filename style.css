@@ -1,10 +1,46 @@
 #detailDisplayMatch {
     height: 475px;
-    width: 49%;
+    width: 48%;
     float:right;
     border:3px;
     border-style:solid;
-    border-color: #FF0000;
+    border-color: #0367fd;
+    border-radius: 24px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+  
+a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background:#181d24;
+    color: white;
+}
+
+.menu-nav-item {
+    margin: 7px auto auto 2px;
+    text-align: center;
+    border: 3px solid #0367fd;
+    width: 220px;
+    outline: none;
+    color:white;
+    border-radius: 14px;
+    padding: 8px;
 }
 
 .menu-nav {
@@ -29,21 +65,26 @@
 .apiBorder {
     border:3px;
     border-style:solid;
-    border-color: #FF0000;
+    border-color: #0367fd;
     padding: 0px;
     border-radius: 15px
-    
 }
 
-a.fillDiv {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
+.apiBorder:hover {
+    border-color: #ffc400ec;
 }
 
 .smallDisplayText {
     text-align:center;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
 .displayList {
@@ -54,9 +95,12 @@ a.fillDiv {
     overflow: hidden; 
     overflow-y: scroll;
     height: 475px;
-    width: 49%;
+    width: 48%;
     gap: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
+
 
 .flexParent {
     box-sizing: border-box;

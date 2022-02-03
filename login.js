@@ -3,7 +3,6 @@ function validate() {
     var password=document.getElementById("password").value;
     if(username == "admin" && password == "123") {
         window.location.replace("index.html");
-        alert("Asdf");
         return false;
     } else {
         console.log("loginfailed");
