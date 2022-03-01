@@ -3,10 +3,12 @@
     
     <head>
         <link rel = "stylesheet" href= "style.css">
+        <script src="started.js"></script>
+        <script src="notStarted.js"></script>
         <script src="script.js"></script>
     </head>
 
-    <body>
+    <body onload="updateMatchList()">
         <ul class ="menu-nav o-flexy">
             <li class = "menu-nav-item"> 
                 <a href = "index.html" >
@@ -41,6 +43,6 @@
             <ul id="displayMatch"; class="menu-nav displayList test"></ul>
             <div id="detailDisplayMatch"></div>
         </div>
-
+        
     </body>
 </html>
