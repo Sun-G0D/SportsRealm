@@ -1,4 +1,6 @@
-var csvFileDataFuture = [];
+import XlsExport from '../xlsExport-master/xlsExport-master/xls-export.js';
+    
+    var csvFileDataFuture = [];
 var csvFileDataAll = [];
 
 
@@ -37,17 +39,12 @@ fetch("https://v3.football.api-sports.io/fixtures?next=15", { // ?league=4&seaso
 })
 .then(data => {  // another promise to get the actual response
     csvFileDataAll = csvFileDataFuture.concat(data.response);
-    
-    Object.keys(csvFileDataAll)).forEach(key => {
-        if(!csvFileDataAll[key]){
-            csvFileDataAll[key] = 'null';
-        }
-    });
+    console.log(csvFileDataAll);
 })
 .catch(err => {
     console.error(err);
 });
 
-console.log(csvFileDataAll);
-
-
+    const xls = new XlsExport(csvFileDataAll, 'Example WB');
+    document.querySelector('#xls-button').addEventListener('click', function() { xls.exportToXLS('export-example.xls') });
+    document.querySelector('#csv-button').addEventListener('click', function() { xls.exportToCSV() })
