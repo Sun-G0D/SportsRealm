@@ -1,6 +1,6 @@
 var displayStartedMatches = startedMatches.map(match => {
     return `
-        <li onclick="inDepthDisplayMatch();" style="cursor: pointer;" class="apiBorder"> 
+        <li onclick="inDepthDisplayMatch(${match.fixture.id});" style="cursor: pointer;" class="apiBorder"> 
             <div>
                 <p class="smallDisplayText">
                     Home Team: ${match.teams.home.name} vs. Away Team: ${match.teams.away.name}
@@ -12,7 +12,7 @@ var displayStartedMatches = startedMatches.map(match => {
 
 var displayNotStartedMatches = notStartedMatches.map(match => {
     return `
-        <li onclick="inDepthDisplayMatch();" style="cursor: pointer;" class="apiBorder"> 
+        <li onclick="inDepthDisplayMatch(${match.fixture.id});" style="cursor: pointer;" class="apiBorder"> 
             <div>
                 <p class="smallDisplayText">
                     Home Team: ${match.teams.home.name} vs. Away Team: ${match.teams.away.name}
@@ -21,6 +21,17 @@ var displayNotStartedMatches = notStartedMatches.map(match => {
         </li>
     `;
 }).join(' ');
+
+function inDepthDisplayMatch(matchid) {
+    if(notStartedMatches.find(match => match.fixture.id == matchid) == undefined) {
+        fixtureIndex = startedMatches.find(match => match.fixture.id == matchid);
+    } else {
+        fixtureIndex = notStartedMatches.find(match => match.fixture.id == matchid);
+    }
+    console.log(fixtureIndex);
+    console.log(`${fixtureIndex.fixture.status.long}`);
+    document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureIndex.fixture.status.long}`;
+}
 
 console.log(displayNotStartedMatches);
 console.log(displayStartedMatches);

@@ -6,6 +6,8 @@
     border-style:solid;
     border-color: #0367fd;
     border-radius: 24px;
+    text-align: center;
+    padding: 10px;
 }
 
 a:link {
@@ -42,6 +44,8 @@ body {
     border-radius: 14px;
     padding: 8px;
 }
+
+
 
 .menu-nav {
     list-style-type: none;
