@@ -24,13 +24,13 @@ var displayNotStartedMatches = notStartedMatches.map(match => {
 
 function inDepthDisplayMatch(matchid) {
     if(notStartedMatches.find(match => match.fixture.id == matchid) == undefined) {
-        fixtureIndex = startedMatches.find(match => match.fixture.id == matchid);
+        fixtureObj = startedMatches.find(match => match.fixture.id == matchid);
     } else {
-        fixtureIndex = notStartedMatches.find(match => match.fixture.id == matchid);
+        fixtureObj = notStartedMatches.find(match => match.fixture.id == matchid);
     }
-    console.log(fixtureIndex);
-    console.log(`${fixtureIndex.fixture.status.long}`);
-    document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureIndex.fixture.status.long}`;
+    console.log(fixtureObj);
+    console.log(`${fixtureObj.fixture.status.long}`);
+    document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
 }
 
 console.log(displayNotStartedMatches);
