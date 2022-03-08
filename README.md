@@ -24,10 +24,11 @@ refreshing the website should fix the problem, if not then you can either contac
 
 <b>Available features: </b>
 - Navigate through 3 different pages (Home, Profile, Shop)
-- Displays username and amount of Betbux in a designated section of the website, inside the blue box
-- Scrollable list containing the most recent matches between teams (Home Team vs. Away Team) of the qualifying teams in 2020
-- Matches are organized chronologically of the Euro Championship games from most recent to latest
-- Each match dispalyed inside a red box to indicate the two teams
+- Scrollable list containing 15 upcoming matches and 15 recently finished matches
+- each match in the list is clickable which will then display the status of the match on the right ie(not started, ongoing, finished)
+- google signin button on the topright which will only work if accessing through the Microsoft Azure hosting service
+- a login webpage in the profile page which can be accessed by pressing logout
+- if accessing the website through a local machine then you can download the most recent data by doing the same process for index.html but with csvdownloader.html
 
 # Additional Documentation and Details:
 https://docs.google.com/document/d/1s6TRNDSlC6Iy3ur4xbQw3T9gNEVDOC4OpPpMN2MRc6M/edit?usp=sharing
