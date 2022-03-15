@@ -39,3 +39,6 @@ function updateMatchList() {
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
 }
+
+var testDatabase = '<? echo $juice; ?>' ;
+console.log(testDatabase);
