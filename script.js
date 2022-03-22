@@ -42,3 +42,8 @@ function onSignIn(googleUser) {
     // get user profile information
     console.log(googleUser.getBasicProfile())
 }
+function onSignOut() {
+    gapi.auth2.getAuthInstance().signOut().then(function() {
+      console.log('user signed out')
+    })
+  }
