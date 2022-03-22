@@ -33,12 +33,7 @@ function inDepthDisplayMatch(matchid) {
     document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
 }
 
-console.log(displayNotStartedMatches);
-console.log(displayStartedMatches);
 function updateMatchList() {
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
 }
-
-var testDatabase = '<? echo $juice; ?>' ;
-console.log(testDatabase);
