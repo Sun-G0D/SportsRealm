@@ -37,3 +37,8 @@ function updateMatchList() {
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
 }
+
+function onSignIn(googleUser) {
+    // get user profile information
+    console.log(googleUser.getBasicProfile())
+  }
