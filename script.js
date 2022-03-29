@@ -33,13 +33,16 @@ function inDepthDisplayMatch(matchid) {
     document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
 }
 
-function updateMatchList() {
-    document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
-    document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
+function onLibraryLoaded() {
+    gapi.load('auth2', function() {
+        gapi.auth2.init({
+            client_id: '547265347014-fva39q2c43k7lua7p6802srkcp6qia66.apps.googleusercontent.com',
+            scope: 'profile'
+        })
+    })
 }
 
-var gSignIn = document.getElementById("gSignInButton");
-gSignIn.onclick = function onSignInClicked() {
+function onSignInClicked() {
     gapi.load('auth2', function() {
         gapi.auth2.signIn().then(function(googleUser) {
           console.log('user signed in')
@@ -49,13 +52,9 @@ gSignIn.onclick = function onSignInClicked() {
     })
 }
 
-function onLibraryLoaded() {
-    gapi.load('auth2', function() {
-        gapi.auth2.init({
-            client_id: '547265347014-fva39q2c43k7lua7p6802srkcp6qia66.apps.googleusercontent.com',
-            scope: 'profile'
-        })
-    })
+function updateMatchList() {
+    document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
+    document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
 }
 
 function onSignOut() {
