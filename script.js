@@ -38,9 +38,24 @@ function updateMatchList() {
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);
 }
 
-function onSignIn(googleUser) {
-    // get user profile information
-    console.log(googleUser.getBasicProfile())
+var gSignIn = document.getElementById("gSignInButton");
+gSignIn.onclick = function onSignInClicked() {
+    gapi.load('auth2', function() {
+        gapi.auth2.signIn().then(function(googleUser) {
+          console.log('user signed in')
+        }, function(error) {
+            console.log('user failed to sign in')
+        })
+    })
+}
+
+function onLibraryLoaded() {
+    gapi.load('auth2', function() {
+        gapi.auth2.init({
+            client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+            scope: 'profile'
+        })
+    })
 }
 
 function onSignOut() {

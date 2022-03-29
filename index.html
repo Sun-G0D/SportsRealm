@@ -7,7 +7,7 @@
         <script src="notStarted.js"></script>
         <script src="script.js"></script>
         <meta name="google-signin-client_id" content="547265347014-fva39q2c43k7lua7p6802srkcp6qia66.apps.googleusercontent.com">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/api.js?onload=onLibraryLoaded" async defer></script>
     </head>
 
     <body onload="updateMatchList()">
@@ -34,10 +34,10 @@
                 </a>
             </li>
             <li class = "menu-nav-item">
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div id="gSignInButton">Sign In</div>
             </li>
             <li class = "menu-nav-item">
-                <button onclick = "onSignOut()">Sign out</button>
+                <div id="gSignOutButton">Sign out</div>
             </li>
         </ul> 
 
