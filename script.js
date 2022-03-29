@@ -47,9 +47,15 @@ function onSignInClicked() {
     // using global variable
     auth2.signIn().then(function(result) {
       console.log('sign in successful')
-      document.querySelector('#name').innerText = JSON.stringify(result)
     }, function(err) {
       console.log('this is an error')
+    })
+}
+
+function showCurrentUserInfo() {
+    gapi.load('auth2', function() {
+        var googleUser = auth2.currentUser.get()
+        console.log('users info ', googleUser)
     })
 }
 
@@ -63,3 +69,4 @@ function onSignOut() {
       console.log('user signed out')
     })
 }
+
