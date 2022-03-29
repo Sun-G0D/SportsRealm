@@ -52,7 +52,7 @@ gSignIn.onclick = function onSignInClicked() {
 function onLibraryLoaded() {
     gapi.load('auth2', function() {
         gapi.auth2.init({
-            client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+            client_id: '547265347014-fva39q2c43k7lua7p6802srkcp6qia66.apps.googleusercontent.com',
             scope: 'profile'
         })
     })
