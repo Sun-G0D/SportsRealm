@@ -32,23 +32,24 @@ function inDepthDisplayMatch(matchid) {
     console.log(`${fixtureObj.fixture.status.long}`);
     document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
 }
-
+var auth2 = undefined;
 function onLibraryLoaded() {
     gapi.load('auth2', function() {
-        gapi.auth2.init({
+        auth2 = gapi.auth2.init({
             client_id: '547265347014-fva39q2c43k7lua7p6802srkcp6qia66.apps.googleusercontent.com',
             scope: 'profile'
         })
     })
+    console.log("this has happened");
 }
 
 function onSignInClicked() {
-    gapi.load('auth2', function() {
-        gapi.auth2.signIn().then(function(googleUser) {
-          console.log('user signed in')
-        }, function(error) {
-            console.log('user failed to sign in')
-        })
+    // using global variable
+    auth2.signIn().then(function(result) {
+      console.log('sign in successful')
+      document.querySelector('#name').innerText = JSON.stringify(result)
+    }, function(err) {
+      console.log('this is an error')
     })
 }
 
