@@ -1,0 +1,136 @@
+#detailDisplayMatch {
+    height: 475px;
+    width: 48%;
+    float:right;
+    text-align: center;
+    padding: 10px;
+    padding-top: 0px;
+    border:3px;
+    border-style:solid;
+    border-color: #0367fd;
+    border-radius: 24px;
+}
+
+#signInButton {
+    color: white;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+  
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+  
+a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background:#181d24;
+    color: white;
+}
+
+.menu-nav-item {
+    margin: 20px;
+    text-align: center;
+    width: 180px;
+    outline: none;
+    color:white;
+    padding: 8px;
+    list-style-type: none;
+}
+
+.menu-nav-item:hover {
+    color: #ffc400ec;
+}
+
+.main-nav{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.menu-nav {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0px;
+}
+
+.o-flexy {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    border:3px;
+    border-style:solid;
+    border-color: #0367fd;
+    border-radius: 24px;
+}
+
+.mainDisplay {
+    width: 320px;
+    padding: 0px;
+    border: 5px solid green;
+    margin: 0;
+}
+
+.apiBorder {
+    border:3px;
+    border-style:solid;
+    border-color: #0367fd;
+    padding: 0px;
+    border-radius: 15px
+}
+
+.apiBorder:hover {
+    border-color: #ffc400ec;
+}
+
+.smallDisplayText {
+    text-align:center;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.displayList {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden; 
+    overflow-y: scroll;
+    height: 485px;
+    width: 48%;
+    gap: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+.flexParent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height:476px;
+    gap: 15px;
+}
+
