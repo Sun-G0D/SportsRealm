@@ -25,9 +25,11 @@ currently only google sign-in works and once your are signed in you will be redi
     Will display the info of the user who is currently signed in.
   Shop:
     placeholder for now, in future it will contain betbux balance.
+- logout to clear session
 
 # Known Issues:
 - Sometimes when signing in, google will return a redirect uri_mismatch(we are currently working on fixing this)
+- user can bypass login by directly typing in the url of the homepage (http://sportsrealm.great-site.net/home.php)
 
 # Additional Documentation and Details:
 https://docs.google.com/document/d/1s6TRNDSlC6Iy3ur4xbQw3T9gNEVDOC4OpPpMN2MRc6M/edit?usp=sharing
