@@ -39,6 +39,35 @@ body {
     color: white;
 }
 
+.gLoginButton {
+    font-size: 120%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: none;
+    text-align: center;
+    border:3px solid #0367fd;
+    padding:14px 10px;
+    width:270px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition:0.25px;
+}
+
+.gLoginButton:focus {
+    width:270px;
+    border-color: #ffc400ec;
+}
+
+.gLoginButton:hover {
+    text-decoration: underline;
+    border-color: #ffc400ec;
+    width:270px;
+    font-size: 120%;
+}
+
 .menu-nav-item {
     margin: 20px;
     text-align: center;
