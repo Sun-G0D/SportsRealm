@@ -21,6 +21,7 @@ class Controller {
                 <th scope="col">Last Name</th>
                 <th scope="col">Avatar</th>
                 <th scope="col">Email</th>
+                <th scope="col">BetBux</th>
                 </tr>
             </thead>
             <tbody>';
@@ -31,6 +32,7 @@ class Controller {
                 <td>'.$userInfo["l_name"].'</td>
                 <td><img style="max-width: 50px;" src="'.$userInfo["avatar"].'" alt="User Avatar"></td>
                 <td>'.$userInfo["email"].'</td>
+                <td>'.$userInfo["betbux"].'$</td>
             </tr>
             ';
         }
