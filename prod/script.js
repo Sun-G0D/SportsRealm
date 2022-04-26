@@ -33,8 +33,6 @@ function inDepthDisplayMatch(matchid) {
     document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
 }
 
-
-
 function updateMatchList() {
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayStartedMatches);
     document.getElementById("displayMatch").insertAdjacentHTML('afterbegin', displayNotStartedMatches);

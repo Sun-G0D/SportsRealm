@@ -6,7 +6,8 @@ require_once('core/controller.Class.php');
 <html>
     <header>
         <link rel = "stylesheet" href= "style.css">
-        <script src="script.js"></script>
+        
+
         <img src="img/logo.png" alt="logo" style="max-width: 80px; float: left; margin-top:0px; margin-bottom:0px; padding-left:30px; padding-right:30px" />
         <ul class ="main-nav o-flexy">
             <li class = "menu-nav-item"> 
@@ -36,7 +37,7 @@ require_once('core/controller.Class.php');
         </ul> 
 
         <article>
-            <header>
+            <header id="userProfileData">
                 <?php
                     $Controller = new Controller;
                     if($Controller -> checkUserStatus($_COOKIE['id'], $_COOKIE['sess'])){
@@ -45,7 +46,39 @@ require_once('core/controller.Class.php');
                 ?>
             </header>
         </article>
+        <script>
+            function addMoney() {
+                console.log("ff");
+                <?php 
+                    $Controller = new Controller;
+                    $Controller -> changeMoney(intval(100), $_COOKIE['id'], $_COOKIE['sess']);
+                ?>
+                document.getElementById("userProfileData").innerHTML = `<?php
+                    $Controller = new Controller;
+                    if($Controller -> checkUserStatus($_COOKIE['id'], $_COOKIE['sess'])){
+                        echo $Controller -> printData(intval($_COOKIE['id']), $_COOKIE['sess']);
+                    }
+                ?>`;
+            }
 
+            function subtractMoney() {
+                console.log("sdfsfdsf");
+                <?php 
+                    $Controller = new Controller;
+                    $Controller -> changeMoney(-intval(1), $_COOKIE['id'], $_COOKIE['sess']);
+                ?>
+                document.getElementById("userProfileData").innerHTML = `<?php
+                    $Controller = new Controller;
+                    if($Controller -> checkUserStatus($_COOKIE['id'], $_COOKIE['sess'])){
+                        echo $Controller -> printData(intval($_COOKIE['id']), $_COOKIE['sess']);
+                    }
+                ?>`;
+            }
+        </script>
+        <button class="gLoginButton" id="addMoolah" type="button">add 1 betbux</button>
+        <script>document.getElementById("addMoolah").onclick = addMoney;</script>
+        <button class="genericButton" id="subtractMoolah" type="button">lose 1 betbux</button>
+        <script>document.getElementById("subtractMoolah").onclick = subtractMoney;</script>
     </header>
     
     

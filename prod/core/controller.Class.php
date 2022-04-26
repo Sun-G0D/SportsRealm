@@ -65,7 +65,7 @@ class Controller {
 		}
 		return $code;
     }
-
+    
     function checkMoney($id, $sess) {
         $db = new Connect;
         $user = $db -> prepare("SELECT betbux FROM users WHERE id=:id AND session=:session");
@@ -85,8 +85,7 @@ class Controller {
             ':id'       => intval($id),
             ':session'  => $sess
         ]);
-        $currentMoney = checkMoney(intval($id), $sess);
-        return $currentMoney;
+        return "asdfasdfsadfa";
     }
     
     function insertData($data){
