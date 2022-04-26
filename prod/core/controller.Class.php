@@ -65,6 +65,29 @@ class Controller {
 		}
 		return $code;
     }
+
+    function checkMoney($id, $sess) {
+        $db = new Connect;
+        $user = $db -> prepare("SELECT betbux FROM users WHERE id=:id AND session=:session");
+        $user -> execute([
+            ':id'       => intval($id),
+            ':session'  => $sess
+        ]);
+        $userMoney = $user -> fetch(PDO::FETCH_ASSOC);
+        return $userMoney["betbux"];
+    }
+
+    function changeMoney($amount, $id, $sess) {
+        $db = new Connect;
+        $user = $db -> prepare("UPDATE users SET betbux=betbux+:amount WHERE id=:id AND session=:session");
+        $user -> execute([
+            ':amount'   => $amount,
+            ':id'       => intval($id),
+            ':session'  => $sess
+        ]);
+        $currentMoney = checkMoney(intval($id), $sess);
+        return $currentMoney;
+    }
     
     function insertData($data){
         $db = new Connect;
