@@ -47,38 +47,60 @@ require_once('core/controller.Class.php');
             </header>
         </article>
         <script>
-            function addMoney() {
-                console.log("ff");
-                <?php 
-                    $Controller = new Controller;
-                    $Controller -> changeMoney(intval(100), $_COOKIE['id'], $_COOKIE['sess']);
-                ?>
-                document.getElementById("userProfileData").innerHTML = `<?php
-                    $Controller = new Controller;
-                    if($Controller -> checkUserStatus($_COOKIE['id'], $_COOKIE['sess'])){
-                        echo $Controller -> printData(intval($_COOKIE['id']), $_COOKIE['sess']);
-                    }
-                ?>`;
-            }
+            function winBet() {
+                console.log("winbet has been called");
+                var xhr;
+                if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                    xhr = new XMLHttpRequest();
+                }
 
-            function subtractMoney() {
-                console.log("sdfsfdsf");
-                <?php 
-                    $Controller = new Controller;
-                    $Controller -> changeMoney(-intval(1), $_COOKIE['id'], $_COOKIE['sess']);
-                ?>
-                document.getElementById("userProfileData").innerHTML = `<?php
-                    $Controller = new Controller;
-                    if($Controller -> checkUserStatus($_COOKIE['id'], $_COOKIE['sess'])){
-                        echo $Controller -> printData(intval($_COOKIE['id']), $_COOKIE['sess']);
+                var data = "profit=" + 1;
+                xhr.open("POST", "ProfileHelper.php", true); 
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+	            xhr.onreadystatechange = display_data;
+                xhr.send(data);
+
+                function display_data() {
+                    console.log("displaydata gets called");
+	                if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            //alert(xhr.responseText);	   
+	                        document.getElementById("userProfileData").innerHTML = xhr.responseText;
+                        } else {
+                            alert('There was a problem with the request.');
+                        }
                     }
-                ?>`;
+	            }
+            }
+            function loseBet() {
+                console.log("winbet has been called");
+                var xhr;
+                if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                    xhr = new XMLHttpRequest();
+                }
+
+                var data = "profit=-1";
+                xhr.open("POST", "ProfileHelper.php", true); 
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+	            xhr.onreadystatechange = display_data;
+                xhr.send(data);
+
+                function display_data() {
+                    console.log("displaydata gets called");
+	                if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            //alert(xhr.responseText);	   
+	                        document.getElementById("userProfileData").innerHTML = xhr.responseText;
+                        } else {
+                            alert('There was a problem with the request.');
+                        }
+                    }
+	            }
             }
         </script>
-        <button class="gLoginButton" id="addMoolah" type="button">add 1 betbux</button>
-        <script>document.getElementById("addMoolah").onclick = addMoney;</script>
-        <button class="genericButton" id="subtractMoolah" type="button">lose 1 betbux</button>
-        <script>document.getElementById("subtractMoolah").onclick = subtractMoney;</script>
+        <button class="gLoginButton" id="addMoolah" onclick="winBet()" type="button">add 1 betbux</button>
+        <button class="genericButton" id="subtractMoolah" onclick="loseBet()" type="button">lose 1 betbux</button>
+        
     </header>
     
     
