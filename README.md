@@ -22,7 +22,7 @@ currently only google sign-in works and once your are signed in you will be redi
   Home:
     contains scrollable list of matches, when a match is clicked the current status of the match will be displayed on the right.
   Profile:
-    Will display the info of the user who is currently signed in.
+    Will display the info of the user who is currently signed in. Has two buttons that allow the user to either add or lose 1 betbux
   Shop:
     placeholder for now, in future it will contain betbux balance.
 - logout to clear session
