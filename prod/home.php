@@ -1,7 +1,7 @@
 <?php
-    require_once('config.php');
-    require_once('updateAPI.php');
-    require_once('core/controller.Class.php');
+require_once('config.php');
+require_once('updateAPI.php');
+require_once('core/controller.Class.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -44,6 +44,35 @@
             </li>
         </ul> 
 
+        <script>
+            function homeBet(matchid) {
+                console.log("winbet has been called");
+                var xhr;
+                if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                    xhr = new XMLHttpRequest();
+                }
+
+                var data = "matchid=" + matchid + " profit=" + 1;
+                xhr.open("POST", "ProfileHelper.php", true); 
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+	            xhr.onreadystatechange = console.log("bet on home");
+                xhr.send(data);
+            }
+            function awayBet(matchid) {
+                console.log("winbet has been called");
+                var xhr;
+                if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+                    xhr = new XMLHttpRequest();
+                }
+
+                var data = "matchid=" + `${fixtureObj.fixture.id}` + " profit=" + 1;
+                xhr.open("POST", "ProfileHelper.php", true); 
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
+	            xhr.onreadystatechange = console.log("bet on away");
+                xhr.send(data);
+            }
+        </script>
+        
         <div class="flexParent">
             <ul id="displayMatch"; class="menu-nav displayList"></ul>
             <div id="detailDisplayMatch"></div>

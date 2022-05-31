@@ -33,9 +33,9 @@ function inDepthDisplayMatch(matchid) {
     }
     console.log(fixtureObj);
     console.log(`${fixtureObj.fixture.status.long}`);
-    document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}`;
+    document.getElementById("detailDisplayMatch").innerHTML = `status: ${fixtureObj.fixture.status.long}` + "<br>" + `date: ${fixtureObj.fixture.date}` + "<br>" + `stadium: ${fixtureObj.fixture.venue.name}` + "<br>" + "<img src=" + `${fixtureObj.teams.away.logo}` + ` alt="Home Team">` + "vs." + "<img src=" + `${fixtureObj.teams.home.logo}` + ` alt="Home Team">` + "<br>" + `<button class="genericButton" id="addMoolah" onclick="homeBet(${fixtureObj.fixture.id})" type="button">bet on home team</button>
+        <button class="genericButton" id="subtractMoolah" onclick="awayBet(${fixtureObj.fixture.id})" type="button">bet on away team</button>`;
 }
-
 
 
 function updateMatchList() {
