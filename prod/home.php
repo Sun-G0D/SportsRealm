@@ -46,7 +46,7 @@ require_once('core/controller.Class.php');
 
         <script>
             function homeBet(matchid) {
-                console.log("winbet has been called");
+                console.log("homeBet has been called" + matchid);
                 var xhr;
                 if (window.XMLHttpRequest) { // Mozilla, Safari, ...
                     xhr = new XMLHttpRequest();
@@ -59,7 +59,7 @@ require_once('core/controller.Class.php');
                 xhr.send(data);
             }
             function awayBet(matchid) {
-                console.log("winbet has been called");
+                console.log("awayBet has been called" + matchid);
                 var xhr;
                 if (window.XMLHttpRequest) { // Mozilla, Safari, ...
                     xhr = new XMLHttpRequest();

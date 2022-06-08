@@ -1,3 +1,9 @@
+<?php
+    require_once('config.php');
+    require_once('core/controller.Class.php');
+
+    $Controller = new Controller;
+?>
 <!DOCTYPE HTML>
 
 <html>
@@ -8,10 +14,11 @@
 
     <body>
         <script>
+            
             nsm =
                 <?php
                     $curl = curl_init();
-        
+
                     curl_setopt_array($curl, array(
                         CURLOPT_URL => 'https://v3.football.api-sports.io/fixtures?next=15',
                         CURLOPT_RETURNTRANSFER => true,
@@ -31,7 +38,15 @@
 
                     curl_close($curl);
                     echo $response;
+
+                    $dec = json_decode($response,true)["response"];
+
+                    foreach ($dec as $value) {
+                        $Controller -> updateMatches($value["fixture"]["id"],$value["fixture"]["status"]["long"]);
+                    }
                 ?>;
+
+
 
             sm =
                 <?php
@@ -56,8 +71,12 @@
 
                     curl_close($curl);
                     echo $response;
+                    $Controller -> cleanMatches();
                 ?>;
-            console.log(nsm);
+
+            console.log(<?php echo json_encode($response, true)?>);
+    
+            /*console.log(nsm);
 
             var dnsm = nsm.response.map(match => {
                 return `
@@ -71,7 +90,8 @@
                 `;
             }).join(' ');
 
-            //console.log(dnsm);
+            console.log(dnsm);*/
         </script>
     </body>
 </html>
+
